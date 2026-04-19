@@ -8,7 +8,7 @@ if isPrivate then
             Duration = 5
         })
     else
-        warn("Please join a public server to use this script.")
+        warn("Please join a public server to use this script. and wait for a moment for it to fully load the script. it might cause to not be aby to click for a moment or might cause lag for a moment")
     end
 
     task.wait(5)
