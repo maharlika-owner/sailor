@@ -1,4 +1,3 @@
--- Better private server detection
 local isPrivate = game.PrivateServerOwnerId ~= 0
 
 if isPrivate then
